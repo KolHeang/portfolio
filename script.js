@@ -48,7 +48,7 @@ const translations = {
     exp_kicker: "Experience",
     exp_title: "Professional Journey",
     exp1_time: "2025 - Present",
-    exp1_title: "Back-End Developer, DEBC",
+    exp1_title: "Back-End Developer, Digital Economy and Business Committee - DEBC",
     exp1_copy: "Leading back-end development for government HR platforms and career application systems.",
     exp2_time: "2022 - 2025",
     exp2_title: "Back-End Developer, TURBOTECH",
@@ -78,7 +78,7 @@ const translations = {
     nav_skills: "ជំនាញ",
     nav_exp: "បទពិសោធន៍",
     nav_contact: "ទំនាក់ទំនង",
-    hero_eyebrow: "អ្នកអភិវឌ្ឍន៍ផ្នែក Back-End",
+    hero_eyebrow: "បុគ្គលិកអភិវឌ្ឍកម្មវិធីអ៊ិនធឺណិតខាងក្រោយ",
     hero_title: "កសាង <span>ប្រព័ន្ធដែលអាចទុកចិត្តបាន</span> សម្រាប់អាជីវកម្មសម័យថ្មី។",
     hero_copy: "ខ្ញុំជំនាញលើ Node.js, NestJS និង Laravel ដើម្បីបង្កើត APIs ដែលរឹងមាំ និងសេវាកម្ម back-end ដែលអាចពង្រីកបាន ដែលជួយដល់កម្មវិធីប្រើប្រាស់។",
     hero_btn_work: "មើលស្នាដៃ",
@@ -87,7 +87,7 @@ const translations = {
     stat_projects: "គម្រោងដែលបានសាងសង់",
     stat_special: "ប្រព័ន្ធគ្រប់គ្រងធនធានមនុស្ស",
     intro_kicker: "អំពីខ្ញុំ",
-    intro_title: "អ្នកអភិវឌ្ឍន៍ Back-end ផ្តោតលើ <span>ប្រព័ន្ធដែលគួរឱ្យទុកចិត្ត</span> និងលំហូរទិន្នន័យច្បាស់លាស់។",
+    intro_title: "បុគ្គលិកអភិវឌ្ឍកម្មវិធីអ៊ិនធឺណិតខាងក្រោយ ផ្តោតលើ <span>ប្រព័ន្ធដែលគួរឱ្យទុកចិត្ត</span> និងលំហូរទិន្នន័យច្បាស់លាស់។",
     intro_copy: "ខ្ញុំជំនាញលើ Node.js, NestJS, TypeScript និង Laravel។ ជំនាញរបស់ខ្ញុំរួមមានប្រព័ន្ធគ្រប់គ្រងធនធានមនុស្ស វេទិកាការងារ ការអភិវឌ្ឍន៍ API និងស្ថាបត្យកម្មមូលដ្ឋានទិន្នន័យ។ ខ្ញុំប្តេជ្ញាសរសេរកូដដែលស្អាត និងងាយស្រួលថែទាំ ដើម្បីដោះស្រាយបញ្ហាអាជីវកម្មជាក់ស្តែង។",
     work_kicker: "ស្នាដៃដែលបានជ្រើសរើស",
     work_title: "គម្រោងលេចធ្លោ",
@@ -102,7 +102,7 @@ const translations = {
     proj3_copy: "ដំណោះស្រាយ ERP បែបម៉ូឌុលសម្រាប់ការលក់ សន្និធិ និងការបង្កើនប្រសិទ្ធភាពគ្រប់គ្រងគម្រោង។",
     skills_kicker: "សមត្ថភាព",
     skills_title: "ជំនាញបច្ចេកទេស",
-    skill1_title: "Back-End",
+    skill1_title: "អភិវឌ្ឍន៍ផ្នែកខាងក្រោយ",
     skill1_copy: "Node.js, NestJS, Laravel, ការរចនា API, Microservices។",
     skill2_title: "មូលដ្ឋានទិន្នន័យ",
     skill2_copy: "PostgreSQL, MySQL, TypeORM, ស្ថាបត្យកម្មមូលដ្ឋានទិន្នន័យ។",
@@ -113,10 +113,10 @@ const translations = {
     exp_kicker: "បទពិសោធន៍",
     exp_title: "ដំណើរវិជ្ជាជីវៈ",
     exp1_time: "២០២៥ - បច្ចុប្បន្ន",
-    exp1_title: "អ្នកអភិវឌ្ឍន៍ Back-End, DEBC",
+    exp1_title: "បុគ្គលិកអភិវឌ្ឍកម្មវិធីអ៊ិនធឺណិតខាងក្រោយ, គណៈកម្មាធិការសេដ្ឋកិច្ចនិងធុរកិច្ចឌីជីថល",
     exp1_copy: "ដឹកនាំការអភិវឌ្ឍន៍ back-end សម្រាប់វេទិកា HR របស់រដ្ឋាភិបាល និងប្រព័ន្ធកម្មវិធីការងារ។",
     exp2_time: "២០២២ - ២០២៥",
-    exp2_title: "អ្នកអភិវឌ្ឍន៍ Back-End, TURBOTECH",
+    exp2_title: "បុគ្គលិកអភិវឌ្ឍកម្មវិធីអ៊ិនធឺណិតខាងក្រោយ, TURBOTECH",
     exp2_copy: "បានបង្កើត និងថែទាំម៉ូឌុល ERP ដ៏ស្មុគស្មាញ និងឧបករណ៍អាជីវកម្មផ្ទៃក្នុងដោយប្រើ Laravel។",
     exp3_time: "២០២២",
     exp3_title: "ជំនួយការ IT, PTS Technology",
@@ -187,7 +187,7 @@ if (nav && navToggle) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
-    
+
     // Animate hamburger to X (simplified)
     const spans = navToggle.querySelectorAll('span');
     if (isOpen) {
@@ -239,13 +239,13 @@ if (contactForm && formStatus) {
     const name = data.get("name");
     const email = data.get("email");
     const message = data.get("message");
-    
+
     const subject = encodeURIComponent(`Inquiry from ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    
+
     formStatus.textContent = "Redirecting to your email client...";
     formStatus.style.color = "var(--teal)";
-    
+
     setTimeout(() => {
       window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
       formStatus.textContent = "Thank you! Email client opened.";
