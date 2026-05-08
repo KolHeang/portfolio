@@ -14,18 +14,24 @@
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Kol Heang portfolio home">
         <span class="brand-mark">KH</span>
-        <span>Kol Heang</span>
+        <span data-i18n="nav_brand">Kol Heang</span>
       </a>
+      
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="km">KH</button>
+      </div>
+
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav class="site-nav" aria-label="Main navigation" data-nav>
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#experience" data-i18n="nav_exp">Experience</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
     </header>
 
@@ -39,27 +45,27 @@
         <img class="hero-image" src="assets/kol-heang-profile.png" alt="Kol Heang profile">
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">Back-End Developer</p>
-          <h1 id="hero-title">Building <span>Reliable Systems</span> for Modern Business.</h1>
-          <p class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Back-End Developer</p>
+          <h1 id="hero-title" data-i18n="hero_title">Building <span>Reliable Systems</span> for Modern Business.</h1>
+          <p class="hero-copy" data-i18n="hero_copy">
             I specialize in Node.js, NestJS, and Laravel to create robust APIs and scalable back-end services that power user-focused applications.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#work">Explore Work</a>
-            <a class="button secondary" href="assets/kol-heang-cv.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="button primary" href="#work" data-i18n="hero_btn_work">Explore Work</a>
+            <a class="button secondary" href="assets/kol-heang-cv.pdf" target="_blank" rel="noopener" data-i18n="hero_btn_cv">Download CV</a>
           </div>
           <dl class="hero-stats" aria-label="Portfolio highlights">
             <div class="stat-item">
               <dt>3+</dt>
-              <dd>Years Experience</dd>
+              <dd data-i18n="stat_exp">Years Experience</dd>
             </div>
             <div class="stat-item">
               <dt>15+</dt>
-              <dd>Projects Built</dd>
+              <dd data-i18n="stat_projects">Projects Built</dd>
             </div>
             <div class="stat-item">
               <dt>DEBC</dt>
-              <dd>HR Platforms</dd>
+              <dd data-i18n="stat_special">HR Platforms</dd>
             </div>
           </dl>
         </div>
@@ -71,10 +77,10 @@
       <section class="intro section-band reveal" aria-labelledby="intro-title">
         <div class="section-inner intro-grid">
           <div>
-            <p class="section-kicker">About Me</p>
-            <h2 id="intro-title">Back-end developer focused on <span>dependable systems</span> and clear data flows.</h2>
+            <p class="section-kicker" data-i18n="intro_kicker">About Me</p>
+            <h2 id="intro-title" data-i18n="intro_title">Back-end developer focused on <span>dependable systems</span> and clear data flows.</h2>
           </div>
-          <p>
+          <p data-i18n="intro_copy">
             I specialize in Node.js, NestJS, TypeScript, and Laravel. My expertise covers HR management systems, career platforms, API development, and database architecture. I am committed to writing clean, maintainable code that solves real-world business problems.
           </p>
         </div>
@@ -83,17 +89,17 @@
       <section class="section reveal" id="work" aria-labelledby="work-title">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="section-kicker">Selected Work</p>
-            <h2 id="work-title">Featured Projects</h2>
+            <p class="section-kicker" data-i18n="work_kicker">Selected Work</p>
+            <h2 id="work-title" data-i18n="work_title">Featured Projects</h2>
           </div>
           <div class="project-grid">
             <article class="project-card">
               <div class="project-topline">
-                <span>HR System</span>
+                <span data-i18n="proj1_tag">HR System</span>
                 <span>Next.js • Node.js</span>
               </div>
-              <h3>HR Management System</h3>
-              <p>
+              <h3 data-i18n="proj1_title">HR Management System</h3>
+              <p data-i18n="proj1_copy">
                 A comprehensive employee management platform with real-time tracking and automated workflows.
               </p>
               <ul class="tag-list" aria-label="Technologies">
@@ -105,11 +111,11 @@
 
             <article class="project-card">
               <div class="project-topline">
-                <span>Career Admin</span>
+                <span data-i18n="proj2_tag">Career Admin</span>
                 <span>NestJS • Next.js</span>
               </div>
-              <h3>Career Application UI</h3>
-              <p>
+              <h3 data-i18n="proj2_title">Career Application UI</h3>
+              <p data-i18n="proj2_copy">
                 Dynamic hiring portal with advanced filtering and candidate management features.
               </p>
               <ul class="tag-list" aria-label="Technologies">
@@ -121,11 +127,11 @@
 
             <article class="project-card">
               <div class="project-topline">
-                <span>ERP System</span>
+                <span data-i18n="proj3_tag">ERP System</span>
                 <span>Laravel • PHP</span>
               </div>
-              <h3>Smart ERP Modules</h3>
-              <p>
+              <h3 data-i18n="proj3_title">Smart ERP Modules</h3>
+              <p data-i18n="proj3_copy">
                 Modular ERP solution for sales, inventory, and project management optimization.
               </p>
               <ul class="tag-list" aria-label="Technologies">
@@ -141,29 +147,29 @@
       <section class="section section-band reveal" id="skills" aria-labelledby="skills-title">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="section-kicker">Capabilities</p>
-            <h2 id="skills-title">Technical Expertise</h2>
+            <p class="section-kicker" data-i18n="skills_kicker">Capabilities</p>
+            <h2 id="skills-title" data-i18n="skills_title">Technical Expertise</h2>
           </div>
           <div class="skills-layout">
             <article class="skill-item">
               <span class="skill-number">01</span>
-              <h3>Back-End</h3>
-              <p>Node.js, NestJS, Laravel, API Design, Microservices.</p>
+              <h3 data-i18n="skill1_title">Back-End</h3>
+              <p data-i18n="skill1_copy">Node.js, NestJS, Laravel, API Design, Microservices.</p>
             </article>
             <article class="skill-item">
               <span class="skill-number">02</span>
-              <h3>Database</h3>
-              <p>PostgreSQL, MySQL, TypeORM, Database Architecture.</p>
+              <h3 data-i18n="skill2_title">Database</h3>
+              <p data-i18n="skill2_copy">PostgreSQL, MySQL, TypeORM, Database Architecture.</p>
             </article>
             <article class="skill-item">
               <span class="skill-number">03</span>
-              <h3>Front-End</h3>
-              <p>Next.js, TypeScript, Tailwind CSS, Responsive Design.</p>
+              <h3 data-i18n="skill3_title">Front-End</h3>
+              <p data-i18n="skill3_copy">Next.js, TypeScript, Tailwind CSS, Responsive Design.</p>
             </article>
             <article class="skill-item">
               <span class="skill-number">04</span>
-              <h3>DevOps</h3>
-              <p>Docker, Nginx, CI/CD, Git, Linux Server.</p>
+              <h3 data-i18n="skill4_title">DevOps</h3>
+              <p data-i18n="skill4_copy">Docker, Nginx, CI/CD, Git, Linux Server.</p>
             </article>
           </div>
         </div>
@@ -172,29 +178,29 @@
       <section class="section reveal" id="experience" aria-labelledby="experience-title">
         <div class="section-inner timeline-layout">
           <div class="section-heading">
-            <p class="section-kicker">Experience</p>
-            <h2 id="experience-title">Professional Journey</h2>
+            <p class="section-kicker" data-i18n="exp_kicker">Experience</p>
+            <h2 id="experience-title" data-i18n="exp_title">Professional Journey</h2>
           </div>
           <div class="timeline">
             <article class="timeline-item">
-              <span class="time-range">2025 - Present</span>
-              <h3>Back-End Developer, DEBC</h3>
-              <p>Leading back-end development for government HR platforms and career application systems.</p>
+              <span class="time-range" data-i18n="exp1_time">2025 - Present</span>
+              <h3 data-i18n="exp1_title">Back-End Developer, DEBC</h3>
+              <p data-i18n="exp1_copy">Leading back-end development for government HR platforms and career application systems.</p>
             </article>
             <article class="timeline-item">
-              <span class="time-range">2022 - 2025</span>
-              <h3>Back-End Developer, TURBOTECH</h3>
-              <p>Developed and maintained complex ERP modules and internal business tools using Laravel.</p>
+              <span class="time-range" data-i18n="exp2_time">2022 - 2025</span>
+              <h3 data-i18n="exp2_title">Back-End Developer, TURBOTECH</h3>
+              <p data-i18n="exp2_copy">Developed and maintained complex ERP modules and internal business tools using Laravel.</p>
             </article>
             <article class="timeline-item">
-              <span class="time-range">2022</span>
-              <h3>IT Assistant, PTS Technology</h3>
-              <p>Supported hardware maintenance and enterprise software deployment.</p>
+              <span class="time-range" data-i18n="exp3_time">2022</span>
+              <h3 data-i18n="exp3_title">IT Assistant, PTS Technology</h3>
+              <p data-i18n="exp3_copy">Supported hardware maintenance and enterprise software deployment.</p>
             </article>
             <article class="timeline-item">
-              <span class="time-range">2018 - 2022</span>
-              <h3>Royal University of Phnom Penh</h3>
-              <p>Bachelor of Computer Science. Focused on algorithms and database management.</p>
+              <span class="time-range" data-i18n="exp4_time">2018 - 2022</span>
+              <h3 data-i18n="exp4_title">Royal University of Phnom Penh</h3>
+              <p data-i18n="exp4_copy">Bachelor of Computer Science. Focused on algorithms and database management.</p>
             </article>
           </div>
         </div>
@@ -203,9 +209,9 @@
       <section class="contact reveal" id="contact" aria-labelledby="contact-title">
         <div class="section-inner contact-layout">
           <div class="contact-copy">
-            <p class="section-kicker">Get In Touch</p>
-            <h2 id="contact-title">Let's build something <span>remarkable</span> together.</h2>
-            <p>
+            <p class="section-kicker" data-i18n="contact_kicker">Get In Touch</p>
+            <h2 id="contact-title" data-i18n="contact_title">Let's build something <span>remarkable</span> together.</h2>
+            <p data-i18n="contact_copy">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <div class="contact-links">
@@ -216,18 +222,18 @@
 
           <form class="contact-form" data-contact-form>
             <label>
-              Your Name
-              <input name="name" type="text" placeholder="John Doe" required>
+              <span data-i18n="form_name">Your Name</span>
+              <input name="name" type="text" placeholder="John Doe" required data-i18n-placeholder="form_name_ph">
             </label>
             <label>
-              Your Email
-              <input name="email" type="email" placeholder="john@example.com" required>
+              <span data-i18n="form_email">Your Email</span>
+              <input name="email" type="email" placeholder="john@example.com" required data-i18n-placeholder="form_email_ph">
             </label>
             <label>
-              Message
-              <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <span data-i18n="form_msg">Message</span>
+              <textarea name="message" rows="5" placeholder="Tell me about your project..." required data-i18n-placeholder="form_msg_ph"></textarea>
             </label>
-            <button class="button primary" type="submit">Send Message</button>
+            <button class="button primary" type="submit" data-i18n="form_btn">Send Message</button>
             <p class="form-note" role="status" data-form-status></p>
           </form>
         </div>
@@ -236,8 +242,8 @@
 
     <footer class="site-footer">
       <div class="footer-content">
-        <p>&copy; 2026 Kol Heang. Built with precision and care.</p>
-        <a href="#top">Back to top ↑</a>
+        <p data-i18n="footer_copy">&copy; 2026 Kol Heang. Built with precision and care.</p>
+        <a href="#top" data-i18n="footer_top">Back to top ↑</a>
       </div>
     </footer>
 
