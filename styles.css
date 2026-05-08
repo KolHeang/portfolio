@@ -136,17 +136,36 @@ textarea {
   width: 100%;
 }
 
-.nav-toggle {
-  display: none;
-  width: 44px;
-  height: 44px;
-  padding: 10px;
-  border: 1px solid var(--glass-border);
-  border-radius: 10px;
-  color: var(--ink);
-  background: var(--glass);
-  cursor: pointer;
-  transition: all 0.2s ease;
+@media (max-width: 968px) {
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    background: var(--bg);
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px;
+    gap: 40px;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+  }
+
+  .site-nav.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 110;
+  }
 }
 
 .nav-toggle:hover {
@@ -171,7 +190,18 @@ textarea {
   border: 1px solid var(--line);
   padding: 4px;
   border-radius: 30px;
-  margin-left: 12px;
+  margin-left: auto;
+}
+
+@media (max-width: 560px) {
+  .lang-switcher {
+    display: none; /* Hide in header on very small screens */
+  }
+
+  .site-nav .lang-switcher {
+    display: flex; /* Show in menu instead */
+    margin: 20px 0 0;
+  }
 }
 
 .lang-btn {
@@ -760,44 +790,68 @@ h1 span {
   }
   
   .hero-actions {
-    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
   }
   
   .hero-stats {
     justify-content: center;
     gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 64px 0;
   }
 }
 
 @media (max-width: 560px) {
-  .button {
-    width: 100%;
-  }
-
-  .hero-actions,
-  .contact-links {
-    width: 100%;
-  }
-
   .hero-stats {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .hero-stats div {
-    padding: 14px;
+    padding: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-stats div:last-child {
+    border-bottom: none;
   }
 
   .section-inner {
-    width: min(100% - 28px, var(--max-width));
+    width: min(100% - 32px, var(--max-width));
   }
 
   .project-card,
+  .skill-item,
   .timeline-item,
   .contact-form {
-    padding: 20px;
+    padding: 24px;
   }
 
-  .site-footer {
+  .contact-form {
+    padding: 32px 24px;
+  }
+
+  .footer-content {
     flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.75rem;
   }
 }

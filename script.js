@@ -73,7 +73,7 @@ const translations = {
     footer_top: "Back to top ↑"
   },
   km: {
-    nav_brand: "គល់ ហៀង",
+    nav_brand: "គល់ ហ៊ាង",
     nav_work: "ស្នាដៃ",
     nav_skills: "ជំនាញ",
     nav_exp: "បទពិសោធន៍",
@@ -184,11 +184,12 @@ updateHeader();
 
 // Mobile Navigation
 if (nav && navToggle) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
+  const toggleMenu = (open) => {
+    const isOpen = open !== undefined ? open : nav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.style.overflow = isOpen ? "hidden" : "";
 
-    // Animate hamburger to X (simplified)
+    // Animate hamburger to X
     const spans = navToggle.querySelectorAll('span');
     if (isOpen) {
       spans[0].style.transform = 'translateY(6px) rotate(45deg)';
@@ -199,16 +200,20 @@ if (nav && navToggle) {
       spans[1].style.opacity = '1';
       spans[2].style.transform = 'none';
     }
-  });
+  };
+
+  navToggle.addEventListener("click", () => toggleMenu());
 
   nav.addEventListener("click", (e) => {
     if (e.target.matches("a")) {
-      nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-      const spans = navToggle.querySelectorAll('span');
-      spans[0].style.transform = 'none';
-      spans[1].style.opacity = '1';
-      spans[2].style.transform = 'none';
+      toggleMenu(false);
+    }
+  });
+
+  // Close menu on resize if desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 968 && nav.classList.contains("is-open")) {
+      toggleMenu(false);
     }
   });
 }
