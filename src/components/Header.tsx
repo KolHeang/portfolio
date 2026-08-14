@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
 
@@ -75,10 +76,12 @@ export const Header: React.FC = () => {
         className="flex items-center gap-3 font-display font-extrabold text-xl tracking-tight text-[var(--text-primary)] hover:opacity-90 transition-opacity"
         aria-label="Kol Heang portfolio home"
       >
-        <img
+        <Image
           className="w-10 h-10 rounded-lg object-cover border border-[var(--border-color)]"
           src="/assets/kh-logo.png"
           alt="KH Logo"
+          width={40}
+          height={40}
         />
         <span>{t("nav_brand")}</span>
       </a>

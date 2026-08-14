@@ -11,6 +11,7 @@ const ROW_1 = [
   { label: "Laravel", icon: "🔴" },
   { label: "TypeScript", icon: "🔷" },
   { label: "PostgreSQL", icon: "🐘" },
+  { label: "Drizzle ORM", icon: "💧" },
   { label: "TypeORM", icon: "🗄" },
   { label: "Docker", icon: "🐳" },
   { label: "REST API", icon: "🔗" },
@@ -18,6 +19,7 @@ const ROW_1 = [
 
 const ROW_2 = [
   { label: "Next.js", icon: "▲" },
+  { label: "Prisma", icon: "◬" },
   { label: "MySQL", icon: "🐬" },
   { label: "React", icon: "⚛" },
   { label: "Nginx", icon: "🌐" },

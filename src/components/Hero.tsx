@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { Reveal } from "./Reveal";
 
@@ -33,14 +34,17 @@ export const Hero: React.FC = () => {
           <div className="relative group">
             {/* Subtle gradient border glow */}
             <div className="absolute -inset-1 bg-gradient-to-tr from-teal-accent to-emerald-accent rounded-2xl blur-md opacity-25 group-hover:opacity-40 transition-opacity duration-500" />
-            <img
-              className="relative w-full rounded-2xl object-cover mask-gradient filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
+            <Image
+              className="relative w-full h-auto rounded-2xl object-cover mask-gradient filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
               style={{
                 maskImage: "linear-gradient(to bottom, black 80%, transparent)",
                 WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent)",
               }}
               src="/assets/kol-heang-profile.png"
               alt="Kol Heang profile"
+              width={460}
+              height={460}
+              priority
             />
           </div>
         </Reveal>

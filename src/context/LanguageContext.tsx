@@ -87,7 +87,7 @@ const translations: Record<Language, Translations> = {
     stat_special: "HR Platforms",
     intro_kicker: "About Me",
     intro_title: "Back-end developer focused on <span>dependable systems</span> and clear data flows.",
-    intro_copy: "I specialize in Node.js, NestJS, TypeScript, TypeORM, PostgreSQL, MySQL, Express, Git, Docker, Laravel, and more. My expertise covers HR management systems, career platforms, API development, and database architecture. I am committed to writing clean, maintainable code that solves real-world business problems.",
+    intro_copy: "I specialize in Node.js, NestJS, TypeScript, Drizzle ORM, Prisma, TypeORM, PostgreSQL, MySQL, Express, Git, Docker, Laravel, and more. My expertise covers HR management systems, career platforms, API development, and database architecture. I am committed to writing clean, maintainable code that solves real-world business problems.",
     work_kicker: "Selected Work",
     work_title: "Featured Projects",
     proj1_tag: "HR System",
@@ -103,8 +103,8 @@ const translations: Record<Language, Translations> = {
     skills_title: "Technical Expertise",
     skill1_title: "Back-End",
     skill1_copy: "Node.js, NestJS, Laravel, API Design, Microservices.",
-    skill2_title: "Database",
-    skill2_copy: "PostgreSQL, MySQL, TypeORM, Database Architecture.",
+    skill2_title: "Database & ORMs",
+    skill2_copy: "PostgreSQL, MySQL, Drizzle ORM, Prisma, TypeORM, Database Architecture.",
     skill3_title: "Front-End",
     skill3_copy: "Next.js, TypeScript, Tailwind CSS, Responsive Design.",
     skill4_title: "DevOps",
@@ -152,7 +152,7 @@ const translations: Record<Language, Translations> = {
     stat_special: "ប្រព័ន្ធគ្រប់គ្រងធនធានមនុស្ស",
     intro_kicker: "អំពីខ្ញុំ",
     intro_title: "អ្នកអភិវឌ្ឍន៍ Back-End ផ្តោតលើ <span>ប្រព័ន្ធដែលអាចទុកចិត្តបាន</span> និងលំហូរទិន្នន័យច្បាស់លាស់។",
-    intro_copy: "ខ្ញុំមានឯកទេសលើ Node.js, NestJS, TypeScript, TypeORM, PostgreSQL, MySQL, Express, Git, Docker, Laravel និងបច្ចេកវិទ្យាផ្សេងៗទៀត។ បទពិសោធន៍របស់ខ្ញុំរួមមានការអភិវឌ្ឍប្រព័ន្ធគ្រប់គ្រងធនធានមនុស្ស (HRMS) វេទិកាការងារ ការរចនា API និងស្ថាបត្យកម្មមូលដ្ឋានទិន្នន័យ។ ខ្ញុំប្ដេជ្ញាសរសេរកូដដែលស្អាត ងាយស្រួលថែទាំ និងមានប្រសិទ្ធភាពខ្ពស់ ដើម្បីដោះស្រាយបញ្ហាអាជីវកម្មជាក់ស្តែង។",
+    intro_copy: "ខ្ញុំមានឯកទេសលើ Node.js, NestJS, TypeScript, Drizzle ORM, Prisma, TypeORM, PostgreSQL, MySQL, Express, Git, Docker, Laravel និងបច្ចេកវិទ្យាផ្សេងៗទៀត។ បទពិសោធន៍របស់ខ្ញុំរួមមានការអភិវឌ្ឍប្រព័ន្ធគ្រប់គ្រងធនធានមនុស្ស (HRMS) វេទិកាការងារ ការរចនា API និងស្ថាបត្យកម្មមូលដ្ឋានទិន្នន័យ។ ខ្ញុំប្ដេជ្ញាសរសេរកូដដែលស្អាត ងាយស្រួលថែទាំ និងមានប្រសិទ្ធភាពខ្ពស់ ដើម្បីដោះស្រាយបញ្ហាអាជីវកម្មជាក់ស្តែង។",
     work_kicker: "ស្នាដៃដែលបានជ្រើសរើស",
     work_title: "គម្រោងលេចធ្លោ",
     proj1_tag: "ប្រព័ន្ធ HR",
@@ -168,8 +168,8 @@ const translations: Record<Language, Translations> = {
     skills_title: "ជំនាញបច្ចេកទេស",
     skill1_title: "ការអភិវឌ្ឍន៍ផ្នែកខាងក្រោយ (Back-End)",
     skill1_copy: "Node.js, NestJS, Laravel, ការរចនា API និងប្រព័ន្ធ Microservices។",
-    skill2_title: "ប្រព័ន្ធមូលដ្ឋានទិន្នន័យ",
-    skill2_copy: "PostgreSQL, MySQL, TypeORM និងស្ថាបត្យកម្មមូលដ្ឋានទិន្នន័យ។",
+    skill2_title: "មូលដ្ឋានទិន្នន័យ និង ORMs",
+    skill2_copy: "PostgreSQL, MySQL, Drizzle ORM, Prisma, TypeORM និងស្ថាបត្យកម្មមូលដ្ឋានទិន្នន័យ។",
     skill3_title: "Front-End",
     skill3_copy: "Next.js, TypeScript, Tailwind CSS និងការរចនាបែបឆ្លើយតប (Responsive Design)។",
     skill4_title: "DevOps",
@@ -212,17 +212,17 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>("en");
-  const [mounted, setMounted] = useState(false);
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const savedLang = localStorage.getItem("portfolio-lang") as Language;
+      if (savedLang === "en" || savedLang === "km") return savedLang;
+    }
+    return "en";
+  });
 
   useEffect(() => {
-    const savedLang = localStorage.getItem("portfolio-lang") as Language;
-    if (savedLang === "en" || savedLang === "km") {
-      setLanguageState(savedLang);
-      document.documentElement.lang = savedLang;
-    }
-    setMounted(true);
-  }, []);
+    document.documentElement.lang = language;
+  }, [language]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
